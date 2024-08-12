@@ -1,0 +1,23 @@
+<div class="col-md-4">
+  <div class="card">
+      <% if(docdata.length>0){ %>
+          
+                <div>Firstname</div>
+                <div>Lastname</div>
+               
+      <% for(var i=0; i<docdata.length; i++){ %>
+            <%= docdata[i].firstname %>
+            <%= docdata[i].lastname %>
+            <img src="<%= docdata[i].image %>" alt="" width="70px" height="50px">
+            <% }%>
+            <% }else {%>
+              no record found
+            <%} %> 
+
+      <div class="card-body">
+          <h3 class="card-title">Dr. Satya</h3>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex sit unde ratione facilis voluptatem repellendus quia voluptatum impedit repellat culpa? Labore voluptates mollitia asperiores tenetur incidunt?</p>
+          <button class="btn btn-primary">Read More</button>
+      </div>
+  </div>
+</div>

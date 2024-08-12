@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <%-include('./common/header.ejs')%>
+  <div class="container mt-5">
+    <div class="row">
+          <h1 class="text-decoration-underline">Doctors Available</h1>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="./images/Screenshot from 2024-06-11 16-36-31.png" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h3 class="card-title">Dr. Balbir Singh</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex sit unde ratione facilis voluptatem repellendus quia voluptatum impedit repellat culpa? Labore voluptates mollitia asperiores tenetur incidunt?</p>
+                    <button class="btn btn-primary">Read More</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+              <img src="./images/Screenshot from 2024-06-11 16-37-09.png" class="card-img-top" alt="">
+              <div class="card-body">
+                  <h3 class="card-title">Dr. Sumit </h3>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex sit unde ratione facilis voluptatem repellendus quia voluptatum impedit repellat culpa? Labore voluptates mollitia asperiores tenetur incidunt?</p>
+                  <button class="btn btn-primary">Read More</button>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="card">
+              <img src="./images/Screenshot from 2024-06-11 16-37-45.png" class="card-img-top" alt="">
+              <div class="card-body">
+                  <h3 class="card-title">Dr. Aman</h3>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex sit unde ratione facilis voluptatem repellendus quia voluptatum impedit repellat culpa? Labore voluptates mollitia asperiores tenetur incidunt?</p>
+                  <button class="btn btn-primary">Read More</button>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="card">
+              <img src="./images/Screenshot from 2024-06-11 16-38-16.png" class="card-img-top" alt="">
+              <div class="card-body">
+                  <h3 class="card-title">Dr. karan</h3>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex sit unde ratione facilis voluptatem repellendus quia voluptatum impedit repellat culpa? Labore voluptates mollitia asperiores tenetur incidunt?</p>
+                  <button class="btn btn-primary">Read More</button>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+            <img src="./images/Screenshot from 2024-06-11 16-38-45.png" class="card-img-top" alt="">
+            <div class="card-body">
+                <h3 class="card-title">Dr. Raj</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex sit unde ratione facilis voluptatem repellendus quia voluptatum impedit repellat culpa? Labore voluptates mollitia asperiores tenetur incidunt?</p>
+                <button class="btn btn-primary">Read More</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+          <img src="./images/Screenshot from 2024-06-11 16-39-16.png" class="card-img-top" alt="">
+          <div class="card-body">
+              <h3 class="card-title">Dr. Satya</h3>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex sit unde ratione facilis voluptatem repellendus quia voluptatum impedit repellat culpa? Labore voluptates mollitia asperiores tenetur incidunt?</p>
+              <button class="btn btn-primary">Read More</button>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+        <% if(docdata.length>0){ %>
+            
+                  <div>Firstname</div>
+                  <div>Lastname</div>
+                 
+        <% for(var i=0; i<docdata.length; i++){ %>
+              <%= docdata[i].firstname %>
+              <%= docdata[i].lastname %>
+              <img src="<%= docdata[i].image %>" alt="" width="70px" height="50px">
+              <% }%>
+              <% }else {%>
+                no record found
+              <%} %> 
+
+        <div class="card-body">
+            <h3 class="card-title">Dr. Satya</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex sit unde ratione facilis voluptatem repellendus quia voluptatum impedit repellat culpa? Labore voluptates mollitia asperiores tenetur incidunt?</p>
+            <button class="btn btn-primary">Read More</button>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+  <%-include('./common/footer.ejs')%>
+</body>
+</html>
